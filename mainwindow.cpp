@@ -123,7 +123,7 @@ void MainWindow::on_bt_say_released()
 
 void MainWindow::chat_with_robot(QString info)
 {
-    QString str_url = "http://api.qingyunke.com/api.php?key=free&appid=0&msg=";
+    QString str_url = "https://api.qingyunke.com/api.php?key=free&appid=0&msg=";
     QUrl url(str_url + info);
     //创建请求
     QNetworkRequest request(url);
