@@ -22,9 +22,8 @@ void TtsThread::finish_tts()
 void TtsThread::run_tts(QString voice_info)
 {
     QDir::setCurrent("/mnt/hgfs/WORK/Compound/bin");
-    QString cmd = "./tts_offline_sample " + voice_info;
+    QString cmd = "./tts_offline_sample \"" + voice_info +"\"";
     system(cmd.toUtf8().data());
-    qDebug()<<"he cheng success";
     system("aplay tts_sample.wav &");
     qDebug()<<voice_info;
 }

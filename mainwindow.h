@@ -64,6 +64,8 @@ private slots:
 
     void read_net_data(QNetworkReply *app);
 
+    void on_bt_clock_clicked();
+
 signals:
     void get_str();
 

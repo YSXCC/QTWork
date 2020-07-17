@@ -22,7 +22,7 @@
    <widget class="QPushButton" name="bt_exit">
     <property name="geometry">
      <rect>
-      <x>190</x>
+      <x>310</x>
       <y>350</y>
       <width>151</width>
       <height>51</height>
@@ -204,6 +204,30 @@ padding:2px 4px;</string>
     </property>
     <property name="autoDefault">
      <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_clock">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>350</y>
+      <width>151</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>黑体</family>
+      <pointsize>13</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(69,137,148);
+border-radius:25px;
+padding:2px 4px;</string>
+    </property>
+    <property name="text">
+     <string>秒表</string>
     </property>
    </widget>
   </widget>

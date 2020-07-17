@@ -4,6 +4,7 @@
 #include "dialogwindow.h"
 #include "playvideowindow.h"
 #include "weatherwindow.h"
+#include "clockwindow.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -103,6 +104,13 @@ void MainWindow::on_bt_weather_clicked()
     this->hide();
 }
 
+void MainWindow::on_bt_clock_clicked()
+{
+    ClockWindow *clock_window = new ClockWindow(this);
+    clock_window->show();
+    this->hide();
+}
+
 void MainWindow::asr_out()
 {
     qDebug()<<"语音识别进程结束"<<endl;
@@ -123,7 +131,7 @@ void MainWindow::on_bt_say_released()
 
 void MainWindow::chat_with_robot(QString info)
 {
-    QString str_url = "http://api.qingyunke.com/api.php?key=free&appid=0&msg=";
+    QString str_url = "https://api.qingyunke.com/api.php?key=free&appid=0&msg=";
     QUrl url(str_url + info);
     //创建请求
     QNetworkRequest request(url);
@@ -149,7 +157,6 @@ void MainWindow::read_net_data(QNetworkReply *app)
     QJsonObject obj = doc.object();
     QString name_obj = obj.value("content").toString();
     emit this->tts_Run(name_obj);
-    qDebug() << "哈哈哈哈";
 }
 
 void MainWindow::do_something(QString str){
@@ -161,7 +168,7 @@ void MainWindow::do_something(QString str){
     }else if(str == "播放视频"){
         ui->bt_video->clicked();
     }else if(str == "打开秒表"){
-        ui->bt_cal->clicked();
+        ui->bt_clock->clicked();
     }else{
         emit MainWindow::chat(str);
     }

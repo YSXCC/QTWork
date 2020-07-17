@@ -18,6 +18,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     asrthread.cpp \
     calculator.cpp \
+    clockwindow.cpp \
     dayweather.cpp \
     dialogwindow.cpp \
     loginwindow.cpp \
@@ -30,6 +31,7 @@ SOURCES += \
 HEADERS += \
     asrthread.h \
     calculator.h \
+    clockwindow.h \
     dayweather.h \
     dialogwindow.h \
     loginwindow.h \
@@ -40,6 +42,7 @@ HEADERS += \
 
 FORMS += \
     calculator.ui \
+    clockwindow.ui \
     dialogwindow.ui \
     loginwindow.ui \
     mainwindow.ui \
